@@ -1,0 +1,16 @@
+{
+    "development": {
+      "username": "jqtkkqzh",
+      "password": "03QFKnVhNfahj29EowyKJNAbCZg7ArG4",
+      "database": "jqtkkqzh",
+      "host": "john.db.elephantsql.com",
+      "dialect": "postgres"
+    },
+    "production": {
+        "username": "jqtkkqzh",
+        "password": "03QFKnVhNfahj29EowyKJNAbCZg7ArG4",
+        "database": "jqtkkqzh",
+        "host": "john.db.elephantsql.com",
+        "dialect": "postgres"
+    }
+  }
