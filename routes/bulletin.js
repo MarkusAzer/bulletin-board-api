@@ -48,9 +48,11 @@ router.post('/', uploader.single("file"),[
 
         const data = req.body;
         //TODO: in production should be stream Api using aws s3;
-        data.imageType = req.file.mimetype;
-        data.imageName = slugify(req.file.originalname);
-        data.imageData = req.file.buffer;
+        if(!empty(req.file)){
+            data.imageType = req.file.mimetype;
+            data.imageName = slugify(req.file.originalname);
+            data.imageData = req.file.buffer;
+        }
 
         const result = await createBulletin(data);
 

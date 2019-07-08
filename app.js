@@ -32,6 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('[:date[clf]] :method :url :status :response-time ms - :res[content-length]'));
 
+// Allow Origin
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    next();
+});
+
 // Import Routes
 const bulletinRoute = require('./routes/bulletin');
 const commentRoute = require('./routes/comment');
